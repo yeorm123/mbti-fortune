@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘의 MBTI 운세</title>
+  <meta name="description" content="내 MBTI를 고르면 오늘의 운세를 알려드려요.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <p class="eyebrow">✦ 하루 한 번, 내 유형의 이야기 ✦</p>
+      <h1>오늘의 MBTI 운세</h1>
+    </header>
+
+    <!-- 1단계: 유형 선택 -->
+    <section id="pick" class="panel">
+      <p class="hint">내 MBTI를 골라주세요</p>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <!-- 2단계: 결과 -->
+    <section id="result" class="panel" hidden>
+      <div class="datebar">
+        <button id="prev" class="arrow" aria-label="이전 날">◀</button>
+        <span id="date"></span>
+        <button id="next" class="arrow" aria-label="다음 날">▶</button>
+      </div>
+
+      <div class="title">
+        <h2 id="type"></h2>
+        <p id="nickname"></p>
+      </div>
+
+      <blockquote id="one-line"></blockquote>
+
+      <div class="cards">
+        <article class="card"><h3>💬 대인관계</h3><p id="relationship"></p></article>
+        <article class="card"><h3>📚 일·학업</h3><p id="work"></p></article>
+        <article class="card"><h3>🌙 생활 리듬</h3><p id="rhythm"></p></article>
+      </div>
+
+      <div class="lucky">
+        <span>🍀 행운의 색 <b id="lucky-color"></b></span>
+        <span>🎁 행운의 아이템 <b id="lucky-item"></b></span>
+      </div>
+
+      <div class="actions">
+        <button id="change" class="btn ghost">유형 바꾸기</button>
+        <button id="share" class="btn">링크 복사</button>
+      </div>
+      <p id="toast" class="toast" aria-live="polite"></p>
+    </section>
+
+    <footer class="foot">재미로 보는 운세예요. 좋은 말만 골라 담아가세요 :)</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
