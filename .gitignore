@@ -1,0 +1,10 @@
+# API 키 — 절대 GitHub에 올리지 않음
+.env
+
+# 수집한 기사 원문·가공 데이터 (비건뉴스 저작물이라 공개 저장소에 올리지 않음)
+data/raw/
+data/*.json
+data/*.csv
+
+__pycache__/
+*.pyc
