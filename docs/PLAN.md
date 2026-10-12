@@ -86,10 +86,10 @@ mbti-fortune/
 | 1 | 폴더 만들기 | ✅ 완료 |
 | 2 | 계획 세우기 (이 문서) | ✅ 초안 |
 | 3 | 폴더 구조 정하기 | ✅ 완료 |
-| 4 | 레퍼런스 데이터 수집 | ✅ 480건 수집 |
+| 4 | 레퍼런스 데이터 수집 | ✅ 480건 수집 ([REFERENCE.md](REFERENCE.md)) |
 | 5 | 운세 문구 만들기 (`fortunes.json`) | ✅ 16유형 × 4항목 × 4문구 직접 작성 |
 | 6 | 화면 구현 (`app/`) | ✅ 완료 |
-| 7 | GitHub CLI로 배포 | ⬜ |
+| 7 | GitHub CLI로 배포 | ✅ https://yeorm123.github.io/mbti-fortune/ |
 
 ## 10. 배포 방법 (예정)
 
