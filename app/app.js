@@ -60,6 +60,7 @@ function shiftDay(n) {
 }
 
 function showPicker() {
+  for (const b of $("grid").children) b.classList.toggle("last", b.textContent === current.type);
   $("result").hidden = true;
   $("pick").hidden = false;
   history.replaceState(null, "", location.pathname);
@@ -88,14 +89,14 @@ async function init() {
   $("prev").addEventListener("click", () => shiftDay(-1));
   $("next").addEventListener("click", () => shiftDay(1));
   $("change").addEventListener("click", showPicker);
+  $("back").addEventListener("click", showPicker);
   $("share").addEventListener("click", share);
 
-  // 링크(#ENFP) > 지난번 선택 순으로 바로 결과 보여주기
-  let saved = null;
-  try { saved = localStorage.getItem(STORE_KEY); } catch {}
+  // 공유 링크(#ENFP)로 들어오면 바로 결과, 아니면 선택 화면 + 지난번 유형 표시
   const fromHash = location.hash.slice(1).toUpperCase();
-  const start = TYPES.includes(fromHash) ? fromHash : TYPES.includes(saved) ? saved : null;
-  if (start) choose(start);
+  if (TYPES.includes(fromHash)) return choose(fromHash);
+  try { current.type = localStorage.getItem(STORE_KEY); } catch {}
+  showPicker();
 }
 
 init();
